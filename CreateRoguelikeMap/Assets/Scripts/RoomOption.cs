@@ -11,7 +11,6 @@ public class RoomOption : MonoBehaviour
     public static readonly int TOP = 2;
     public static readonly int BOTTOM = 3;
 
-    public MyGizmo[] Doors { get; set; } = new MyGizmo[] { null, null, null, null };
     public RoomOption[] AroundRooms { get; set; } = new RoomOption[] { null, null, null, null };
     // .. 방의 번호는 고유한 값이며 바뀌지 않음
     public Vector2Int RoomNumber { get; set; }

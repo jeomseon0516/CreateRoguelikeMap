@@ -80,13 +80,8 @@ public class CreateMap : MonoBehaviour
             {
                 room.gameObject.SetActive(false);
 
-                for (int i = 0; i < room.Doors.Length; ++i)
-                {
-                    if (ReferenceEquals(room.Doors[i], null) || !room.Doors[i]) continue;
-
-                    DestroyImmediate(room.Doors[i]);
-                    room.Doors[i] = null;
-                }
+                foreach (MyGizmo door in room.gameObject.GetComponents<MyGizmo>())
+                    DestroyImmediate(door);
             }
         }
 
